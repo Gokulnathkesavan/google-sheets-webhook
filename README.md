@@ -1,49 +1,84 @@
-# Google Sheets Webhook API
+# 📝 Google Apps Script Form Handler
 
-![Google Sheets](https://img.shields.io/badge/Google%20Sheets-API%20Webhook-34a853) 
-![Webhook](https://img.shields.io/badge/Webhook-Ready-important) 
-![License](https://img.shields.io/badge/License-MIT-blue)
+This script serves as a backend endpoint for handling `POST` requests and storing form submissions into a Google Sheet.
 
-## Table of Contents
-1. [Features](#-features)
-2. [Setup Guide](#-setup-guide)
-3. [API Documentation](#-api-documentation)
-4. [Examples](#-examples)
-5. [Troubleshooting](#-troubleshooting)
-6. [Advanced](#-advanced-usage)
+## 📌 Features
+
+- Accepts `POST` requests with JSON payload.
+- Automatically assigns a unique serial number to each entry.
+- Appends new data to a specified Google Sheet.
+- Returns JSON responses indicating success or error.
 
 ---
 
-## ✨ Features
-- **Auto-generated IDs** - Sequential serial numbers
-- **Smart Timestamps** - Accurate arrival time logging
-- **Data Validation** - Enforces required fields
-- **Error Handling** - Detailed error responses
-- **Audit Trail** - Complete request history
+## 📂 Google Sheet Setup
+
+1. Create a new Google Sheet.
+2. Name the first sheet as `Sheet1` (or change the `SHEET_NAME` constant in the script accordingly).
+3. Add the following headers in row 1 (starting at A1):
+
+```
+Serial Number | Parent Name | Child Name | Email | Phone | Age Group | Preferred Sport | Location | Distance | Received At
+```
 
 ---
 
-## 🛠 Setup Guide
+## 🚀 Deployment
 
-### 1. Google Sheets Setup
-1. Create new spreadsheet
-2. Name first sheet: `DataLog` (exact match)
-3. Set these headers in Row 1:
+1. Open [Google Apps Script](https://script.google.com) and create a new project.
+2. Paste the script into the editor.
+3. Click **Deploy > Manage Deployments**.
+4. Select **Web app**, then:
+   - Set **Execute as**: *Me*
+   - Set **Who has access**: *Anyone*
+5. Click **Deploy** and copy the URL.
 
-| Column | Description | Example |
-|--------|-------------|---------|
-| A | ID | 1001 |
-| B | Parent Name | "John Doe" |
-| ... | ... | ... |
-| J | Timestamp | Auto-filled |
+---
 
-### 2. Script Deployment
-```javascript
-1. Extensions > Apps Script
-2. Paste the webhook code
-3. Click Deploy > New Deployment
-4. Select:
-   - Type: Web App
-   - Execute as: Me
-   - Who has access: Anyone
-5. Copy the webhook URL
+## 📬 POST Request Format
+
+Send a `POST` request to the deployed URL with the following JSON structure:
+
+```json
+{
+  "parentName": "John Doe",
+  "childName": "Jane Doe",
+  "email": "john@example.com",
+  "phone": "1234567890",
+  "ageGroup": "8-10",
+  "preferredSport": "Soccer",
+  "location": "Downtown",
+  "distance": "5km"
+}
+```
+
+### ✅ Sample Success Response
+
+```json
+{
+  "status": "success",
+  "message": "Data saved successfully"
+}
+```
+
+### ❌ Sample Error Response
+
+```json
+{
+  "status": "error",
+  "message": "Error details here"
+}
+```
+
+---
+
+## 🛠️ Customization
+
+- Change `SHEET_NAME` at the top of the script to match your desired sheet tab name.
+- Add or remove fields in both the script and sheet headers as needed.
+
+---
+
+## 📄 License
+
+MIT License. Free to use and modify.

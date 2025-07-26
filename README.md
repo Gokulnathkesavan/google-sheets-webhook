@@ -72,6 +72,29 @@ Send a `POST` request to the deployed URL with the following JSON structure:
 
 ---
 
+## 🧪 Example cURL Command
+
+Use the following `cURL` command to test the endpoint:
+
+```bash
+curl -X POST "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "parentName": "John Doe",
+    "childName": "Jane Doe",
+    "email": "john@example.com",
+    "phone": "1234567890",
+    "ageGroup": "8-10",
+    "preferredSport": "Soccer",
+    "location": "Downtown",
+    "distance": "5km"
+  }'
+```
+
+Replace `YOUR_DEPLOYMENT_ID` with the actual deployment ID from your Apps Script deployment.
+
+---
+
 ## 🛠️ Customization
 
 - Change `SHEET_NAME` at the top of the script to match your desired sheet tab name.

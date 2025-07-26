@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
   <img src="https://img.icons8.com/color/96/000000/google-sheets.png" alt="Google Sheets" width="100"/>
 </p>
 

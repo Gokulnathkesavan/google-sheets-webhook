@@ -1,40 +1,49 @@
-# 📋 Google Sheets Webhook Integration
+# Google Sheets Webhook API
 
-**Enterprise-ready solution for capturing API data directly into Google Sheets**
+![Google Sheets](https://img.shields.io/badge/Google%20Sheets-API%20Webhook-34a853) 
+![Webhook](https://img.shields.io/badge/Webhook-Ready-important) 
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-![Google Sheets API](https://img.shields.io/badge/Google%20Sheets-Data%20Pipeline-blue) 
-![Webhook Ready](https://img.shields.io/badge/Webhook-Ready-success)
+## Table of Contents
+1. [Features](#-features)
+2. [Setup Guide](#-setup-guide)
+3. [API Documentation](#-api-documentation)
+4. [Examples](#-examples)
+5. [Troubleshooting](#-troubleshooting)
+6. [Advanced](#-advanced-usage)
 
-## 🌟 Key Features
-- **Automatic Serial Numbers** - Unique ID for every record
-- **Real-time Timestamps** - Precise arrival time logging
-- **Data Validation** - Type and format checking
-- **Error Recovery** - Built-in retry mechanism
+---
+
+## ✨ Features
+- **Auto-generated IDs** - Sequential serial numbers
+- **Smart Timestamps** - Accurate arrival time logging
+- **Data Validation** - Enforces required fields
+- **Error Handling** - Detailed error responses
 - **Audit Trail** - Complete request history
 
-## 🚀 Quick Start Guide
+---
 
-### 1. Spreadsheet Setup
-1. Create new Google Sheet
-2. Rename first tab to `DataLog` (exact spelling)
-3. Set up these headers in Row 1:
+## 🛠 Setup Guide
 
-| Column | Description | Format | Example |
-|--------|-------------|--------|---------|
-| A | ID | Auto-number | 1001 |
-| B | Parent Name | Text | "John Smith" |
-| C | Child Name | Text | "Emma Smith" |
-| D | Email | Valid email | "user@domain.com" |
-| E | Phone | E.164 format | "+14155551234" |
-| J | Timestamp | Auto | 2023-08-21 09:30:00 |
+### 1. Google Sheets Setup
+1. Create new spreadsheet
+2. Name first sheet: `DataLog` (exact match)
+3. Set these headers in Row 1:
+
+| Column | Description | Example |
+|--------|-------------|---------|
+| A | ID | 1001 |
+| B | Parent Name | "John Doe" |
+| ... | ... | ... |
+| J | Timestamp | Auto-filled |
 
 ### 2. Script Deployment
 ```javascript
-1. Open Apps Script (Extensions > Apps Script)
-2. Replace default code with provided solution
+1. Extensions > Apps Script
+2. Paste the webhook code
 3. Click Deploy > New Deployment
 4. Select:
    - Type: Web App
    - Execute as: Me
-   - Access: Anyone
+   - Who has access: Anyone
 5. Copy the webhook URL

@@ -1,8 +1,5 @@
-<p align="left">
-  <img src="https://img.icons8.com/color/96/000000/google-sheets.png" alt="Google Sheets" width="100"/>
-</p>
+# 📝 Google Apps Script Form Handler <img src="https://img.icons8.com/color/24/000000/google-sheets.png" alt="Google Sheets" style="vertical-align:middle"/>
 
-# 📝 Google Apps Script Form Handler
 
 
 

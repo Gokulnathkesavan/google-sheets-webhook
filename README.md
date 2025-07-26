@@ -35,6 +35,14 @@ Serial Number | Parent Name | Child Name | Email | Phone | Age Group | Preferred
 
 ---
 
+```mermaid
+graph TD
+    A[Client Application] -->|HTTPS POST| B(Google Apps Script)
+    B --> C{Validation}
+    C -->|Valid| D[Google Sheets]
+    C -->|Invalid| E[Error Response]
+```
+
 ## 📬 POST Request Format
 
 Send a `POST` request to the deployed URL with the following JSON structure:

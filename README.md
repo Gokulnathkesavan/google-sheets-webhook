@@ -113,8 +113,5 @@ Replace `YOUR_DEPLOYMENT_ID` with the actual deployment ID from your Apps Script
 - Change `SHEET_NAME` at the top of the script to match your desired sheet tab name.
 - Add or remove fields in both the script and sheet headers as needed.
 
----
 
-## 📄 License
 
-MIT License. Free to use and modify.

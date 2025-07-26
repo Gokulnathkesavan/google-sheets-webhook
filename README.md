@@ -1,4 +1,10 @@
+<p align="center">
+  <img src="https://img.icons8.com/color/96/000000/google-sheets.png" alt="Google Sheets" width="100"/>
+</p>
+
 # 📝 Google Apps Script Form Handler
+
+
 
 This script serves as a backend endpoint for handling `POST` requests and storing form submissions into a Google Sheet.
 
